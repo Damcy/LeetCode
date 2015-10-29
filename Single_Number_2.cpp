@@ -1,4 +1,4 @@
-// author: Miller
+// author: Damcy
 // create on: 2015-10-12
 // description: LeetCode Single Number II
 #include<iostream>
