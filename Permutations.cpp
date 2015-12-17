@@ -1,0 +1,41 @@
+// author: Ien
+// create on: 2015-12-17
+// description: LeetCode Permutations
+
+#include<iostream>
+#include<vector>
+
+using namespace std;
+
+class Solution {
+    public:
+        void recurision_find(vector<vector<int> >& res_set, vector<int> nums, vector<int>& res, vector<bool>& mark) {
+            if (res.size() == nums.size()) {
+                res_set.push_back(res);
+            } else {
+                for(int i = 0; i < nums.size(); ++i) {
+                    // if not used
+                    if (!mark[i]) {
+                        mark[i] = true;
+                        res.push_back(nums[i]);
+                        recurision_find(res_set, nums, res, mark);
+                        // reset state
+                        res.pop_back();
+                        mark[i] = false;
+                    }
+                }
+            }
+        }
+
+        vector<vector<int> > permute(vector<int>& nums) {
+            vector<vector<int> > res_set;
+            if (nums.empty()) {
+                return res_set;
+            }
+            // use for mark used elements
+            vector<bool> mark(nums.size(), false);
+            vector<int> res;
+            recurision_find(res_set, nums, res, mark);
+            return res_set;
+        }
+};
