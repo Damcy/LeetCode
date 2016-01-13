@@ -1,4 +1,4 @@
-// author: Ien
+// author: Ian
 // create on: 2015-12-16
 // description: LeetCode Jump Game II
 

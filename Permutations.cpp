@@ -1,4 +1,4 @@
-// author: Ien
+// author: Ian
 // create on: 2015-12-17
 // description: LeetCode Permutations
 

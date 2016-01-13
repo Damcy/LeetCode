@@ -1,4 +1,4 @@
-// author: Ien
+// author: Ian
 // create on: 2015-12-18
 // description: LeetCode Pow(x, n)
 
