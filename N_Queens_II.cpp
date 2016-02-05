@@ -13,8 +13,10 @@ public:
     int board_size;
     int total_num;
 
+    // 检查当前列放置的皇后是否有冲突
     int check(int n) {
         for (int i = 0; i < n; ++i) {
+            // 皇后不能同行，也不能在同一斜对角线上
             if (queen[i] == queen[n] ||
                     abs(queen[i] - queen[n]) == (n - i)) {
                 return 1;
@@ -23,6 +25,7 @@ public:
         return 0;
     }
 
+    // 放置第n列的皇后
     void put_queen(int n) {
         for (int i = 0; i < board_size; ++ i) {
             queen[n] = i;
