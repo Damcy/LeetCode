@@ -1,6 +1,6 @@
 // author: Ian
 // create on: 2016-03-03
-// description: LeetCode Path Sum
+// description: LeetCode Minimun Depth of Binary Tree
 
 /**
  * Definition for a binary tree node.
