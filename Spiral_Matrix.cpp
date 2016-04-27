@@ -34,8 +34,6 @@ public:
             if(!now_axis) {
                 break;
             }
-            cout << pos_x << " " << pos_y << endl;
-            cout << matrix[pos_x][pos_y] << endl;
             res.push_back(matrix[pos_x][pos_y]);
             now_steps++;
             if (now_axis == now_steps) {
