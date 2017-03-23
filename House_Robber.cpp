@@ -17,9 +17,11 @@ public:
 
         vector<int> res;
         res.push_back(nums[0]);
-        res.push_back(nums[1]);
+        res.push_back(nums[0] > nums[1] ? nums[0] : nums[1]);
         for (int i = 2; i < len; ++i) {
-            
+            int rob_max = max(res[i - 2] + nums[i], res[i - 1]);
+            res.push_back(rob_max);
         }
+        return res[len - 1];
     }
 };
